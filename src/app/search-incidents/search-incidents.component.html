@@ -19,7 +19,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedJobName = $event' [selectedItem]='selectedJobName'></app-dropdown>
             </div>
           </div>
         </div>
@@ -70,7 +71,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedSource = $event' [selectedItem]='selectedSource'></app-dropdown>
             </div>
           </div>
         </div>
@@ -82,7 +84,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeBusinessDl($event)' [selectedItems]='selectedBusinessDl'></app-multiselect>
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeBusinessDl($event)' [selectedItems]='selectedBusinessDl'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedBusinessDl = $event' [selectedItem]='selectedBusinessDl'></app-dropdown>
             </div>
           </div>
         </div>

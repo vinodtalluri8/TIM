@@ -9,7 +9,7 @@ import { MockDataService } from "../services/mock-data.service";
 })
 export class SearchIncidentsComponent implements OnInit {
 
-mockDropDownData;
+  mockDropDownData;
   mockMultiDropDownData;
   selectedJobName;
   priority;
@@ -45,28 +45,28 @@ mockDropDownData;
     );
   }
 
-      changeJobName(event) {
-      if (event === 'none') {
-        this.selectedJobName = [];
-      } else {
-        this.selectedJobName = event;
-      }
-    }
+    //   changeJobName(event) {
+    //   if (event === 'none') {
+    //     this.selectedJobName = [];
+    //   } else {
+    //     this.selectedJobName = event;
+    //   }
+    // }
 
-      changeSource(event) {
-      if (event === 'none') {
-        this.selectedSource = [];
-      } else {
-        this.selectedSource = event;
-      }
-    }
-      changeBusinessDl(event) {
-      if (event === 'none') {
-        this.selectedBusinessDl = [];
-      } else {
-        this.selectedBusinessDl = event;
-      }
-    }
+    //   changeSource(event) {
+    //   if (event === 'none') {
+    //     this.selectedSource = [];
+    //   } else {
+    //     this.selectedSource = event;
+    //   }
+    // }
+    //   changeBusinessDl(event) {
+    //   if (event === 'none') {
+    //     this.selectedBusinessDl = [];
+    //   } else {
+    //     this.selectedBusinessDl = event;
+    //   }
+    // }
 
 
   disable() {

@@ -19,7 +19,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>
+              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedJobName = $event' [selectedItem]='selectedJobName'></app-dropdown>
             </div>
           </div>
         </div>
@@ -31,7 +32,7 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeBusinessDl($event)' [selectedItems]='selectedBusinessDl'></app-multiselect>
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedBusinessDl = $event' [selectedItem]='selectedBusinessDl'></app-dropdown>
             </div>
           </div>
         </div>
@@ -57,7 +58,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>
+              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedSource = $event' [selectedItem]='selectedSource'></app-dropdown>
             </div>
           </div>
         </div>
@@ -69,7 +71,8 @@
           </div>
           <div class="row paddingDataClass">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeTechnicalDl($event)' [selectedItems]='selectedTechnicalDl'></app-multiselect>
+              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeTechnicalDl($event)' [selectedItems]='selectedTechnicalDl'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTechnicalDl = $event' [selectedItem]='selectedTechnicalDl'></app-dropdown>
             </div>
           </div>
         </div>
@@ -105,7 +108,7 @@
   <br>
   <div class="row addCheckListButtons">
     <div class="col-sm-8 col-md-8 col-lg-8">
-      <app-button (click)="saveData()" label="Search" styleClass='button-action'></app-button>
+      <app-button (click)="saveData()" [disabled]='disable()' label="Search" styleClass='button-action'></app-button>
       <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
     </div>
   </div>
