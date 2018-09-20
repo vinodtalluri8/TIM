@@ -1,102 +1,116 @@
-<div class="panel panel-default" style="margin-left:-3px">
+<div class="panel panel-default maindivmargin">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 padding-left-10">
       <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
     </div>
   </div>
   <div class="panel-heading section-padding">
-    <h3 class="panel-title" style="font-size: 24px">Job Maintenance - Search</h3>
+    <h3 class="panel-title">Search Incidents</h3>
   </div>
 
   <div class="panel-body section-padding">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-xs-4">
         <div>
-          <div class="row paddingTopClass">
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <label class="control-label">Job Name</label>
             </div>
           </div>
-          <div class="row paddingDataClass">
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>-->
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeJobName($event)' [selectedItems]='selectedJobName'></app-multiselect>-->
               <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedJobName = $event' [selectedItem]='selectedJobName'></app-dropdown>
             </div>
           </div>
         </div>
         <div>
-          <div class="row paddingTopClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <label class="control-label">Business DL</label>
-            </div>
-          </div>
-          <div class="row paddingDataClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedBusinessDl = $event' [selectedItem]='selectedBusinessDl'></app-dropdown>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="row paddingTopClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <label class="control-label">Status</label>
-            </div>
-          </div>
-          <div class="row paddingDataClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.status = $event' [selectedItem]='status'></app-dropdown>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div>
-          <div class="row paddingTopClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <label class="control-label">Source</label>
-            </div>
-          </div>
-          <div class="row paddingDataClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>-->
-              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedSource = $event' [selectedItem]='selectedSource'></app-dropdown>
-            </div>
-          </div>
-        </div>
-         <div>
-          <div class="row paddingTopClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <label class="control-label">Technical DL</label>
-            </div>
-          </div>
-          <div class="row paddingDataClass">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <!--<app-multiselect [dataSource]='activeEmployees' (selectedMultiSelect)='changeTechnicalDl($event)' [selectedItems]='selectedTechnicalDl'></app-multiselect>-->
-              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTechnicalDl = $event' [selectedItem]='selectedTechnicalDl'></app-dropdown>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div>
-          <div class="row paddingTopClass">
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <label class="control-label">Priority</label>
             </div>
           </div>
-          <div class="row paddingDataClass">
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.priority = $event' [selectedItem]='priority'></app-dropdown>
             </div>
           </div>
         </div>
         <div>
-          <div class="row paddingTopClass">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Job Status</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.jobStatus = $event' [selectedItem]='jobStatus'></app-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">From Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate = $event' showIcon='true' yearNavigator='true'
+                monthNavigator='true' yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Source</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeSource($event)' [selectedItems]='selectedSource'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedSource = $event' [selectedItem]='selectedSource'></app-dropdown>
+            </div>
+          </div>
+        </div>
+         <div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Business DL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <!--<app-multiselect [dataSource]='mockMultiDropDownData' (selectedMultiSelect)='changeBusinessDl($event)' [selectedItems]='selectedBusinessDl'></app-multiselect>-->
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedBusinessDl = $event' [selectedItem]='selectedBusinessDl'></app-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">To Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-calender id="calender" class="calWidth" (calenderSelected)='this.toDate = $event' showIcon='true' yearNavigator='true'
+                monthNavigator='true' yearRange='2000:2030' [inputDate]='toDate'></app-calender>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <label class="control-label">Classification</label>
             </div>
           </div>
-          <div class="row paddingDataClass">
+          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.classification = $event' [selectedItem]='classification'></app-dropdown>
             </div>

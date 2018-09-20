@@ -9,13 +9,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MultiSelectModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RadioButtonModule} from 'primeng/radiobutton';
-import { MockDataService } from "./services/mock-data.service";
+import { MockDataService } from "./incident-monitoring/services/mock-data.service";
 import { TableModule } from 'primeng/table';
 import { AccordionModule } from 'primeng/accordion';
 import { RouterModule } from '@angular/router';
-import { SearchIncidentsComponent } from './search-incidents/search-incidents.component';
-import { MaintenanceNewJobComponent } from './maintenance/maintenance-new-job/maintenance-new-job.component';
-import { MaintenanceSearchComponent } from './maintenance/maintenance-search/maintenance-search.component';
+import { SearchIncidentsComponent } from './incident-monitoring/search-incidents/search-incidents.component';
+import { MaintenanceNewJobComponent } from './incident-monitoring/maintenance/maintenance-new-job/maintenance-new-job.component';
+import { MaintenanceSearchComponent } from './incident-monitoring/maintenance/maintenance-search/maintenance-search.component';
 
 @NgModule({
   declarations: [
